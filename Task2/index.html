@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Grid</title>
+  </head>
+  <body>
+    <style>
+      :root {
+        --col-nums: 10;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .table > div {
+        display: grid;
+        grid-template-columns: repeat(var(--col-nums), 60px);
+      }
+
+      .table > div > div {
+        border-width: 1px 1px 1px 1px;
+        border-color: black;
+        border-style: solid;
+
+        align-content: center;
+        text-align: center;
+        user-select: none;
+        padding: 6px;
+      }
+      .header {
+          top: 0;
+        font-size: 30px;
+        font-weight: bold;
+        background: #f0f0f0;
+        position: relative;
+      }
+      .controls {
+        max-width: 300px;
+      }
+      .controls > * {
+        display: block;
+        box-sizing: border-box;
+      }
+      .controls > input,
+      button {
+        padding: 6px;
+        width: 300px;
+      }
+      .controls > button {
+        margin-top: 5px;
+        margin-bottom: 30px;
+      }
+      .fixed-header .header {
+        position: fixed;
+      }
+    </style>
+    <div class="controls">
+      <label for="n">N (Number of row)</label>
+      <input type="text" name="n" value="300" id="n" />
+      <label for="n">M (Number of column)</label>
+      <input type="text" name="m" value="20" id="m" />
+      <button class="show">Show</button>
+    </div>
+    <div class="table"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
