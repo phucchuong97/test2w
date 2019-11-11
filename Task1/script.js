@@ -5,14 +5,14 @@ function genarateMap(n) {
   const map = document.querySelector(".map");
   map.innerHTML = "";
   for (let i = 0; i < n; i++) {
-    let row = document.createElement("div");
-    row.classList.add(`col${i}`);
+    let col = document.createElement("div");
+    col.classList.add(`col${i}`);
     for (let j = 0; j < n; j++) {
       let ele = document.createElement("div");
       ele.dataset.location = `${j} ${i}`;
-      row.appendChild(ele);
+      col.appendChild(ele);
     }
-    map.appendChild(row);
+    map.appendChild(col);
   }
 }
 
@@ -46,6 +46,7 @@ function play(e) {
 }
 
 function malert(s) {
+  isPlaying = false;
   setTimeout(function() {
     alert(s);
   }, 500);
