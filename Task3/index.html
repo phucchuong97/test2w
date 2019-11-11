@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snake</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .map{
+            height: 600px;
+            width: 600px;
+            border:2px solid red;
+        }
+        .map div{
+            box-sizing: border-box;
+            height: 30px;
+            width: 30px;
+            float: left;
+            border: 1px solid black;
+        }
+        .snake-head{
+            background: red;
+        }
+        .snake-body{
+            background: black;
+        }
+        .food{
+            background: yellow;
+        }
+        button{
+            padding: 10px;
+        }
+        .game-mode{
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+    
+    <div>
+        <button class="start">Start</button>
+        <button class="stop">Stop</button>
+        <button class="mode">Change Mode</button>
+        <p>Game Mode: <span class="game-mode">B</span></p>
+    </div>
+    <div class="map">
+        
+    </div>
+    
+
+    <script src="script.js"> </script>
+</body>
+</html>
