@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CARO</title>
+  </head>
+  <body>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .map {
+        display: flex;
+      }
+      .map div{
+        flex: 1;
+        box-sizing: border-box;
+        height: 60px;
+        width: 60px;
+        float: left;
+      }
+      .map div div{
+        border-width: 1px 1px 1px 1px;
+        border-color:black;
+        border-style:solid;
+        background: #f0f0f0;
+        align-content: center;
+        text-align: center;
+        font-size: 50px;
+        user-select: none;
+      }
+      .controls{
+          max-width: 300px;     
+      }
+      .controls > *{
+          display: block;
+          box-sizing: border-box;
+      }
+      .controls > input,button{
+          padding:6px;
+          width: 300px;
+      }
+      .controls > button{
+        margin-top: 5px;
+        margin-bottom: 30px;
+      }
+    </style>
+    <div class="controls">
+        <label for="n">N (Map Size)</label>
+        <input type="text" name="n" value="3" id="n">
+        <label for="n">M (Number of continuous element to win)</label>
+        <input type="text" name="m" value="3" id="m">
+        <button class="start">Start</button>
+    </div>
+    <div class="map"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
